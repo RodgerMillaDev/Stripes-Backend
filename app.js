@@ -212,9 +212,8 @@ app.get("/access_token", (req, res) => {
 app.post("/stkpush", (req, res) => {
 //   const phoneNumber = req.body.phone;
   const phoneNumber =req.body.fonNumber;
-  // const amount = req.body.amount;
-  const amount = req.body.amountPay;
-  // const amount = 1;
+  // const amount = req.body.amountPay;
+  const amount = 1;
 
   console.log(amount,phoneNumber)
   getAccessToken()
