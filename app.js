@@ -171,8 +171,8 @@ app.post('/extractVedata', async (req, res) => {
 
 
 async function getAccessToken() {
-  const consumer_key = "5MCpMmYqSNOzAvRXNhzCwx6EZa4vSRJK3wBKbR7WTUqOMRO0"; // REPLACE IT WITH YOUR CONSUMER KEY
-  const consumer_secret = "Tw4tXlnumeLXJ0sjA5yoA1g3qhHvlBamQtOX3blHpLFiQcsFCKTBy8U8EQnkmYus"; // REPLACE IT WITH YOUR CONSUMER SECRET
+  const consumer_key = "TBps15q8LIyQMFCG17z2bSFR5leldPafzoLvCxIdaYZV6sOj"; // REPLACE IT WITH YOUR CONSUMER KEY
+  const consumer_secret = "fQDeKpslji2EygQBtFG2n5t9An5jHddcpuVHYpWA5cJGAFq6ShYm5GCqhe26zQTB"; // REPLACE IT WITH YOUR CONSUMER SECRET
   const url =
     "https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
 
@@ -224,8 +224,8 @@ app.post("/stkpush", (req, res) => {
       const auth = "Bearer " + accessToken;
       const timestampx = moment().format("YYYYMMDDHHmmss");
       const password = Buffer.from(
-        "5005216" +
-          "deefe5a02c7ee51ababf2f67414b2d2f0dda2b7f6cad947ec0f8b042b869ce15" +
+        "6569484" +
+          "072dfdb29aec324a1861e0ade32a8495fa125934db6d251738f24a713536833f" +
           timestampx
       ).toString("base64");
 
@@ -233,13 +233,13 @@ app.post("/stkpush", (req, res) => {
         .post(
           url,
           {
-            BusinessShortCode: "5005216",
+            BusinessShortCode: "6569484",
             Password: password,
             Timestamp: timestampx,
             TransactionType: "CustomerBuyGoodsOnline",
             Amount: amount,
             PartyA: phoneNumber,
-            PartyB: "5305293",
+            PartyB: "8717440",
             PhoneNumber: phoneNumber,
             CallBackURL: "https://ubunifucollege.com/callback",
             AccountReference: "Bunny Scents",
@@ -280,8 +280,8 @@ app.post("/query", (req, res) => {
       const auth = "Bearer " + accessToken;
       const timestampx = moment().format("YYYYMMDDHHmmss");
       const password = Buffer.from(
-        "5005216" +
-          "deefe5a02c7ee51ababf2f67414b2d2f0dda2b7f6cad947ec0f8b042b869ce15" +
+        "6569484" +
+          "072dfdb29aec324a1861e0ade32a8495fa125934db6d251738f24a713536833f" +
           timestampx
       ).toString("base64");
 
@@ -289,7 +289,7 @@ app.post("/query", (req, res) => {
         .post(
           url,
           {
-            BusinessShortCode: "5005216",
+            BusinessShortCode: "6569484",
             Password: password,
             Timestamp: moment().format("YYYYMMDDHHmmss"),
             CheckoutRequestID: checkID,
@@ -317,8 +317,8 @@ app.post("/transactionstatus", (req, res) => {
 
   const timestamp = moment().format("YYYYMMDDHHmmss");
   const password = Buffer.from(
-    "5005216" +
-      "deefe5a02c7ee51ababf2f67414b2d2f0dda2b7f6cad947ec0f8b042b869ce15" +
+    "6569484" +
+      "072dfdb29aec324a1861e0ade32a8495fa125934db6d251738f24a713536833f" +
       timestamp
   ).toString("base64");
   getAccessToken()
@@ -332,7 +332,7 @@ app.post("/transactionstatus", (req, res) => {
         .post(
           url,
           {
-            BusinessShortCode: "5005216",
+            BusinessShortCode: "6569484",
             Password: password,
             Timestamp: moment().format("YYYYMMDDHHmmss"),
             CheckoutRequestID: mpesaReceiptNumber,
