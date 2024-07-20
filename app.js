@@ -2,11 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
 const moment = require("moment");
-const schedule =require("node-schedule")
 const cors = require("cors");
-const nodemailer=require("nodemailer")
-const { info } = require("console");
-const {createTransport}= require("nodemailer")
 
 const FormData = require('form-data');
 
